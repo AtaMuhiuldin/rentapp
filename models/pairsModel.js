@@ -12,6 +12,16 @@ const pairs = new Schema ({
     houseId: {
         type : mongoose.Schema.Types.ObjectId,
         ref : "tblhouses"
+    }, 
+    pairStatus:{
+        type: Boolean
+    }, 
+    pairAcceptDate: {
+        type: Date
+    }, 
+    pairDate: {
+        type: Date, 
+        default: Date.now()
     }
 })
 

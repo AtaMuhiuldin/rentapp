@@ -32,6 +32,9 @@ const house = new Schema ({
     }, 
     houseImage: {
         type: String
+    }, 
+    pairCode: {
+        
     }
 
 })
