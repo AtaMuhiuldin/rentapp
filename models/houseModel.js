@@ -34,7 +34,7 @@ const house = new Schema ({
         type: String
     }, 
     pairCode: {
-        
+        type: String
     }
 
 })
