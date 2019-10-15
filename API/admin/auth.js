@@ -21,10 +21,12 @@ Router.post("/signup", (req, res) => {
 
                 bcrypt.genSalt(10, (err, salt) =>{
                     if(err) {
+                        console.log(err);
                         return res.json({msg: "encryption error", success: false}).status(500);
                     }
                     bcrypt.hash(landload.password, salt, (err, hash) =>{
                         if(err){
+                            console.log(err);
                             return res.json({msg: "encryption error", success: false}).status(500);
                         }
                         newAdmin.password = hash;

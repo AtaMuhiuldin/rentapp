@@ -9,7 +9,8 @@ const house = new Schema ({
         type: String
     },
     houseType:{
-        type: String
+       type: mongoose.Schema.Types.ObjectId, 
+       path: "tblhousetypes"
     },
     streetName: {
         type: String
@@ -20,13 +21,16 @@ const house = new Schema ({
     state:{
         type: String
     },
-    rentPLan: {
+    rentPlan: {
         type: String
     }, 
     rentAmount: {
         type: String
     },
     rentCurrency: {
+        type: String
+    }, 
+    houseImage: {
         type: String
     }
 
