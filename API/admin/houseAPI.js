@@ -1,6 +1,8 @@
 const Router = require('express').Router();
 const {upload, CreateURL} = require('../../storage')();
 const {House, HouseType} = require('../../models');
+const randomatic = require('randomatic')
+
 Router.post("/add-house", upload.single("houseImage") , (req, res) =>{
 
 
@@ -70,5 +72,18 @@ Router.get("/get-house-types" , (req, res) => {
             res.json({msg: "not found error", success:false});
         })
 })
+
+
+// Router.post("/generate-pair-code", (req, res) =>{
+//     const { _id } = req.body;
+//     const pairCode = randomatic("0", 5);
+//     House.findById(_id)
+//         .then(oHouse => {
+//             oHouse.pairCode = pairCode
+//             oHouse.save()
+//                 .then()
+//         })
+
+// })
 
 module.exports = Router;
