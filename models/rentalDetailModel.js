@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-const currencies = new Schema ({
+const rentaldetails = new Schema ({
     rentalId: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "tblrentals"
@@ -30,4 +30,4 @@ const currencies = new Schema ({
     }
 })
 
-module.exports = mongoose.model("tblcurrencies" , currencies);
+module.exports = mongoose.model("tblrentaldetails" , rentaldetails);

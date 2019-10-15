@@ -8,9 +8,6 @@ const HouseType = require('./houseType');
 const House = require('./houseModel');
 const RentalDetail = require('./rentalDetailModel');
 
-
-
-
 module.exports = {
     Admin,
     User,
