@@ -2,22 +2,7 @@ const Router = require('express').Router();
 const User = require('../../models/userModel');
 const bcrypt = require('bcryptjs');
 
-//////////////////////////////////search//////////////////////////////////////////
-Router.post ("/search" ,(req, res) =>{
-    const { search } = req.body;
-    
-    User.find({ fName :  new RegExp(search, "i") })
-    .then( fSearch => { 
-    
-            return res.json({ msg: "Search Found" , search: fSearch , success: true}).status(200);
-     
-    })
-    .catch( err => {
-        return res.json({ msg: "error" , error: err}).status(404);
-    })
 
-
-})
 
 //////////////////////////////////register//////////////////////////////////////////
 Router.post("/regTanent" , (req, res) => {
