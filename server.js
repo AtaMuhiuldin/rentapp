@@ -7,10 +7,9 @@ const mongoose = require('mongoose');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-const db = require('./config/dbConfig').mongodbOffline;
+const db = require('./config/dbConfig').mongodbOnline;
 mongoose.connect(db, {useUnifiedTopology: true, useNewUrlParser: true} )
 .then(m =>{
-    
     
     app.use("/admin", require('./routes/adminRoutes'));
     app.use("/user", require('./routes/userRoutes'));

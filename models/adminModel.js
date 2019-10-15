@@ -1,6 +1,10 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 const admins = new Schema ({
+    email: {
+        type: String,
+        require: true
+    },
     fName : {
         type : String
     },
@@ -9,10 +13,6 @@ const admins = new Schema ({
     },
     DOB: {
         type: Date
-    },
-    email: {
-        type: String,
-        require: true
     },
     mobile: {
         type: String,
